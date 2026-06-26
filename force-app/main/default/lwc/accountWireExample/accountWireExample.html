@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Account Info">
+
+        <template if:true={account}>
+            <p><b>Name:</b> {name}</p>
+            <p><b>Phone:</b> {phone}</p>
+            <p><b>Industry:</b> {industry}</p>
+        </template>
+
+        <template if:true={error}>
+            <p style="color:red">Error loading account</p>
+        </template>
+
+    </lightning-card>
+</template>

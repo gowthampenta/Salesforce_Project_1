@@ -1,0 +1,23 @@
+<apex:page controller="SOQL_EXP_2">
+   <apex:form >
+     <apex:pageBlock >
+       <apex:pageBlockButtons location="top">
+          <apex:commandButton value="Search" action="{!searchAccounts}"/>
+       </apex:pageBlockButtons>
+       
+       <apex:pageBlockSection >
+           <apex:pageBlockSectionItem >
+               <apex:outputLabel value="Amount"/>
+               <apex:inputText value="{!amount}"/>
+           </apex:pageBlockSectionItem>
+       </apex:pageBlockSection>
+         
+         <apex:pageBlockTable value="{!accList}" var="a">
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.id}"/>
+            <apex:column value="{!a.AnnualRevenue}"/>
+         </apex:pageBlockTable>
+    
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Account Pagination">
+
+        <div style="padding:10px; font-weight:bold;">
+            Showing {startDisplay} to {endDisplay} records
+        </div>
+
+        <lightning-datatable
+            key-field="Id"
+            data={records}
+            columns={columns}
+            draft-values={draftValues}
+            onsave={handleSave}
+            hide-checkbox-column>
+        </lightning-datatable>
+
+        <div style="margin-top:10px; display:flex; gap:10px;">
+            <lightning-button label="Previous" onclick={handlePrevious} disabled={disablePrevious}></lightning-button>
+            <lightning-button label="Next" onclick={handleNext} disabled={disableNext}></lightning-button>
+            <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<template>
+      <lightning-button label="Display Accounts" variant="Brand" onclick={onShowAllAccounts}></lightning-button>
+      <template for:each={accRecords} for:item="acc">
+           <lightning-card key={acc.Name} icon-name="standard:account">
+                 <p>{acc.Name}</p>
+                 <p>{acc.Rating}</p>
+                 <p>{acc.Id}</p>
+           </lightning-card>
+      </template>
+</template>

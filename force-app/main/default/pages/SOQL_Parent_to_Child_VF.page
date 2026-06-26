@@ -1,0 +1,18 @@
+<apex:page controller="SOQL_Parent_to_Child">
+    <apex:form >
+          <apex:pageBlock >
+                <apex:pageBlockTable value="{!accList}" var="acc">
+                         <apex:column value="{!acc.id}"/>
+                         <apex:column value="{!acc.name}"/>
+                         <apex:column value="{!acc.rating}"/>
+                         <apex:column >
+                              <apex:pageBlockTable value="{!acc.contacts}" var="con">
+                                  <apex:column value="{!con.id}"/>
+                                  <apex:column value="{!con.lastname}"/>
+                              </apex:pageBlockTable>
+                         </apex:column>
+                         
+                </apex:pageBlockTable>
+          </apex:pageBlock>
+    </apex:form>
+</apex:page>

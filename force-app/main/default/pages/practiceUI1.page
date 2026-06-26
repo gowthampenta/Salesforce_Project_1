@@ -1,0 +1,27 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:sectionHeader title="Account Edit" subtitle="New Account"/>
+        
+        <apex:pageBlock title="Account Details">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Save & New"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Account Information">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name:" for="accName"/>
+                    <apex:inputField value="{!Account.Name}" id="accName"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Address Information">
+                <apex:inputField value="{!Account.BillingStreet}"/>
+                <apex:inputField value="{!Account.BillingCity}"/>
+                <apex:inputField value="{!Account.BillingState}"/>
+                <apex:inputField value="{!Account.BillingPostalCode}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

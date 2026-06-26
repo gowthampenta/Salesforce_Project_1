@@ -1,0 +1,32 @@
+<apex:page controller="SimpleInterestController">
+    <apex:form id="resultPanel">
+        <apex:pageBlock title="Interest Calculator" id="calcBlock">
+            <apex:pageBlockSection title="Enter Details" columns="2">
+                <apex:inputText value="{!principal}" label="Principal Amount (₹)" required="true"/>
+                <apex:inputText value="{!rate}" label="Rate of Interest (%)" required="true"/>
+                <apex:inputText value="{!timee}" label="Time (Years)" required="true"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection >
+                <apex:commandButton value="Compute Interest"
+                                    action="{!calculateInterest}"
+                                    reRender="resultPanel"
+                                    style="background:yellow; color:black; padding:8px 16px; border:1px solid; border-radius:4px; font-weight:bold;"/>
+            </apex:pageBlockSection>
+
+            <apex:outputPanel id="resultPanel">
+                <apex:outputPanel rendered="{!interest > 0}">
+                    <apex:facet name="header">
+                        <h2 style="color:green; font-weight:bold;">Calculation Result</h2>
+                    </apex:facet>
+                    <div style="padding:10px; background-color:#f0f8ff; border:1px solid #ccc; border-radius:5px;">
+                        <p><strong>Principal:</strong> ₹ {!principal}</p>
+                        <p><strong>Rate:</strong> {!rate} %</p>
+                        <p><strong>Time:</strong> {!timee} years</p>
+                        <p><strong>Interest:</strong> ₹ <span style="color:blue; font-size:16px;">{!interest}</span></p>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

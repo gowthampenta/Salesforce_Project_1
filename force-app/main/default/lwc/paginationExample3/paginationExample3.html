@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Profile Based DataTable with Pagination">
+
+        <lightning-datatable
+            key-field="Id"
+            data={records}
+            columns={columns}
+            hide-checkbox-column>
+        </lightning-datatable>
+
+        <div style="margin-top:10px; display:flex; gap:10px;">
+            <lightning-button label="Previous" onclick={handlePrevious} disabled={disablePrevious}></lightning-button>
+            <lightning-button label="Next" onclick={handleNext} disabled={disableNext}></lightning-button>
+            <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child Component">
+        <lightning-input 
+            label="Enter your name"
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-button 
+            label="Send to Parent"
+            onclick={sendToParent}>
+        </lightning-button>
+    </lightning-card>
+</template>

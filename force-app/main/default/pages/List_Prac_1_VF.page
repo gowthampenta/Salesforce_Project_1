@@ -1,0 +1,16 @@
+<apex:page controller="List_Prac_1">
+   <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockButtons location="top">
+              <apex:commandButton value="Show Accounts" action="{!showAccounts}"></apex:commandButton>
+          </apex:pageBlockButtons>
+         <apex:pageBlockTable value="{!accList}" var="acc">
+             <apex:column value="{!acc.name}"> </apex:column>
+             <apex:column value="{!acc.industry}"> </apex:column>        
+
+         </apex:pageBlockTable>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>
+
+<!--- List_Prac_1 -->

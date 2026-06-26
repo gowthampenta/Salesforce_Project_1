@@ -1,0 +1,12 @@
+<apex:page controller="SOQL_EXP_1">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!accList}" var="ac">
+                   <apex:column value="{!ac.id}"/>
+                   <apex:column value="{!ac.Name}"/>
+                   <apex:column value="{!ac.AnnualRevenue}"/>
+                   <apex:column value="{!ac.industry}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

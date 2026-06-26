@@ -1,0 +1,15 @@
+<template>
+    <center>Employee Form</center>
+    <lightning-input label="Employee Name" placeholder="Enter Employee Name" type="text"></lightning-input>
+    <lightning-input label="Address" placeholder="Enter Employee Address" type="text"></lightning-input>
+    <lightning-combobox name="Gender" label="Gender" placeholder="Select Gender" value={value} options={options} onchange={handleChange}>
+
+    </lightning-combobox>
+    <lightning-input label="Employee Age" type="number" placeholder="Enter Employee Age"></lightning-input>
+    <lightning-input label="Employee Password" type="password" placeholder="Enter Password"></lightning-input>
+    <lightning-input label="Employee Date Of Birth" type="date" placeholder="Enter Employee DOB"></lightning-input>
+    <lightning-input label="Attach file" type="file" accept=".doc,.docx,.pdf"></lightning-input>
+    <lightning-input label="Favorite Color" type="color" placeholder="Select your fav color"></lightning-input>
+    <lightning-input label="Active?" type="checkbox-button" placeholder="Active?"></lightning-input>
+    
+</template>

@@ -1,0 +1,57 @@
+<template>
+    <lightning-card title="Opportunity Override">
+
+        <!-- Step 1: Record Type Selection -->
+        <template if:true={isStepOne}>
+            <lightning-radio-group
+                label="Select Record Type"
+                options={recordTypeOptions}
+                value={selectedRecordTypeId}
+                onchange={handleRTChange}>
+            </lightning-radio-group>
+
+            <br/>
+
+            <lightning-button 
+                label="Next" 
+                variant="brand"
+                onclick={handleNext}>
+            </lightning-button>
+        </template>
+
+        <!-- Step 2: Dynamic Form -->
+        <template if:true={isStepTwo}>
+            <lightning-record-edit-form
+                object-api-name="Opportunity"
+                onsuccess={handleSuccess}>
+
+                <lightning-messages></lightning-messages>
+
+                <!-- Record Type -->
+                <lightning-input-field 
+                    field-name="RecordTypeId"
+                    value={selectedRecordTypeId}>
+                </lightning-input-field>
+
+                <!-- Dynamic Fields from Field Set -->
+                <template for:each={fields} for:item="field">
+                    <lightning-input-field
+                        key={field}
+                        field-name={field}
+                        onchange={handleAccountChange}>
+                    </lightning-input-field>
+                </template>
+
+                <br/>
+
+                <lightning-button 
+                    type="submit" 
+                    variant="brand"
+                    label="Save">
+                </lightning-button>
+
+            </lightning-record-edit-form>
+        </template>
+
+    </lightning-card>
+</template>

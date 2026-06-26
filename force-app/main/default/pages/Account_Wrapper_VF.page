@@ -1,0 +1,24 @@
+<apex:page controller="AccountWrapperController">
+
+    <apex:form >
+        <apex:pageBlock title="Account List">
+
+            <apex:pageBlockTable value="{!wrapList}" var="w">
+                <apex:column >
+                    <apex:inputCheckbox value="{!w.isSelected}" />
+                </apex:column>
+                <apex:column value="{!w.acc.Name}" />
+                <apex:column value="{!w.acc.Industry}" />
+            </apex:pageBlockTable>
+
+            <apex:commandButton value="Process Selected" action="{!processSelected}" rerender="selectedBlock"/>
+            <apex:pageBlock title="Selected Accounts" id="selectedBlock">
+                 <apex:pageBlockTable value="{!selectedAccounts}" var="acc">
+               <apex:column value="{!acc.Name}"/>
+               <apex:column value="{!acc.Industry}"/>
+            </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

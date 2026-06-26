@@ -1,0 +1,10 @@
+<template>
+     <template for:each={accrecords.data} for:item="acc">
+        <lightning-card key={acc.Name} icon-name="standard:account">
+               <p>{acc.Name}</p>
+               <p>{acc.Rating}</p>
+        </lightning-card>
+     </template>
+</template>
+
+<!--    1-AccountHandler1.apex,2-wireDecoratorExample.js ,3-wireDecoratorExample.html            (order)  -->

@@ -1,0 +1,16 @@
+<template>
+     <center><b style="color:red">Calculator</b></center>
+     <lightning-input label="Input 1" name="input1" value={input1} onchange={onChangeHandle} placeholder="Enter Input1 value"></lightning-input>
+     <lightning-input label="Input 2" name="input2" value={input2} onchange={onChangeHandle} placeholder="Enter Input2 value"></lightning-input>
+     <br/>
+    
+     <lightning-button label="Addition" onclick={addition} variant="Brand" class="slds-m-left_x-large"></lightning-button>
+     <lightning-button label="Subtraction" onclick={subtraction} variant="Brand" class="slds-m-left_x-large"></lightning-button>
+     <lightning-button label="Divison" onclick={divison} variant="Brand" class="slds-m-left_x-large"></lightning-button>
+     <lightning-button label="Multiplication" onclick={multiplication} variant="Brand" class="slds-m-left_x-large"></lightning-button>
+
+     <lightning-input label="Result" value={Result} ></lightning-input>
+     
+</template>
+
+<!---class="slds-m-left_x-large"    <====  margin-left-large-->

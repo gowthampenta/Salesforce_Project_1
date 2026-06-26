@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-p-around_medium">
+
+            <!-- Parent passing data to Child -->
+            <c-child-component
+                greeting={messageFromParent}>
+            </c-child-component>
+
+            <lightning-button
+                label="Call Child Method"
+                onclick={callChildMethod}
+                class="slds-m-top_medium">
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

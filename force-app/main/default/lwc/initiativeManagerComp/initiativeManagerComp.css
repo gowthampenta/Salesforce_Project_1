@@ -1,0 +1,42 @@
+.red-box{
+    width:12px;
+    height:12px;
+    background:red;
+    display:inline-block;
+}
+
+.yellow-box{
+    width:12px;
+    height:12px;
+    background:orange;
+    display:inline-block;
+}
+
+.blue-box{
+    width:12px;
+    height:12px;
+    background:blue;
+    display:inline-block;
+}
+
+.person-details{
+    display:flex;
+    flex-direction: row;
+}
+
+.headerActions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.userName {
+    font-weight: 600;
+    padding-right: 10px;
+}

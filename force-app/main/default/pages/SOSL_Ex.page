@@ -1,0 +1,57 @@
+<apex:page controller="SOSL_Ex">
+    <apex:form >
+        <apex:pageBlock title="Accounts">
+            <apex:pageBlockTable value="{!accList}" var="acc">
+                <apex:column value="{!acc.Id}"/>
+                <apex:column value="{!acc.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Contacts">
+            <apex:pageBlockTable value="{!conList}" var="con">
+                <apex:column value="{!con.Id}"/>
+                <apex:column value="{!con.LastName}"/>
+                <apex:column value="{!con.Email}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Opportunities">
+            <apex:pageBlockTable value="{!oppList}" var="opp">
+                <apex:column value="{!opp.Id}"/>
+                <apex:column value="{!opp.Name}"/>
+                <apex:column value="{!opp.StageName}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+
+<!-- SOSL_Ex -->
+
+<!--
+
+<apex:page controller="SOSL_Ex">
+    <apex:form >
+        <apex:pageBlock title="Accounts">
+             <apex:pageBlockTable value="{!accList}" var="acc">
+                   <apex:column value="{!acc.Id}"/>
+                   <apex:column value="{!acc.name}"/>
+             </apex:pageBlockTable>
+        </apex:pageBlock>
+         <apex:pageBlock title="Contacts">
+             <apex:pageBlockTable value="{!conList}" var="con">
+                   <apex:column value="{!con.Id}"/>
+                   <apex:column value="{!con.lastname}"/>
+                   <apex:column value="{!con.email}"/>
+             </apex:pageBlockTable>
+        </apex:pageBlock>
+         <apex:pageBlock title="Opportunity">
+             <apex:pageBlockTable value="{!oppList}" var="opp">
+                   <apex:column value="{!opp.Id}"/>
+                   <apex:column value="{!opp.Name}"/>
+                   <apex:column value="{!opp.stageName}"/>
+             </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+
+-->

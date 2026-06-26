@@ -1,0 +1,49 @@
+<apex:page controller="Loan_Calculator_apex_be" >
+    <apex:form style="font-family:Arial; background-color:#f5f5f5; padding:30px; width:400px; margin:auto; border-radius:10px; border:1px solid #ccc;">
+        
+        <h2 style="text-align:center; color:teal; font-style:italic;">
+            <u>Loan Calculator</u>
+        </h2>
+        <br/>
+
+        <!-- Input Section -->
+        <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <apex:outputLabel value="Annual Interest" for="annInt" style="font-weight:bold;"/>
+                <apex:inputText id="annInt" value="{!annInt_val}" style="width:150px; text-align:center; border:1px solid gray;"/>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <apex:outputLabel value="Years" for="year" style="font-weight:bold;"/>
+                <apex:inputText id="year" value="{!year_val}" style="width:150px; text-align:center; border:1px solid gray;"/>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <apex:outputLabel value="Amount" for="amount" style="font-weight:bold;"/>
+                <apex:inputText id="amount" value="{!amount_val}" style="width:150px; text-align:center; border:1px solid gray;"/>
+            </div>
+        </div>
+
+        <br/>
+
+        <!-- Compute Button -->
+        <div style="text-align:center;">
+            <apex:commandButton value="Compute Payment" 
+                                action="{!compute}" 
+                                style="background-color:#e0e0e0; font-weight:bold; padding:6px 15px; border:1px solid #aaa; border-radius:4px;"/>
+        </div>
+
+        <br/>
+
+        <!-- Output Section -->
+        <div style="margin-top:20px; text-align:center;">
+            <div style="border:2px solid black; padding:10px; margin-bottom:10px; font-weight:bold;">
+                Monthly Payment : {!monthly_pay_val}
+            </div>
+
+            <div style="border:2px solid black; padding:10px; font-weight:bold;">
+                Total Payment : {!tot_pay_val}
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

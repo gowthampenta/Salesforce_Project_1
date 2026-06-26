@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Account Search + Pagination">
+
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                type="text"
+                label="Search Account"
+                value={searchKey}
+                onchange={handleSearchChange}>
+            </lightning-input>
+        </div>
+
+        <template if:true={accounts}>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <div class="slds-p-around_medium slds-align_absolute-center">
+            <lightning-button label="Previous" onclick={handlePrevious}></lightning-button>
+            <lightning-button label="Next" onclick={handleNext} class="slds-m-left_small"></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

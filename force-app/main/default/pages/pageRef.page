@@ -1,0 +1,13 @@
+<apex:page controller="pageReference_Ex">
+    <apex:form >
+       <apex:pageBlock title="Calculators">
+        
+            <apex:pageBlockButtons location="top">
+           
+                <apex:commandButton value="Simple Interest Calculator" action="{!simple_interest}"/>
+                 <apex:commandButton value="Loan Calculator" action="{!loan_Calculator}"/>
+            </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

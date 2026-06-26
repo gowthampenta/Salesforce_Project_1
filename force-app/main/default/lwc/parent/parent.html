@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Parent Component">
+        <p>👋 Name received from child: {receivedName}</p>
+
+        <!-- Listening to child event -->
+        <c-child onsendname={handleName}></c-child>
+    </lightning-card>
+</template>

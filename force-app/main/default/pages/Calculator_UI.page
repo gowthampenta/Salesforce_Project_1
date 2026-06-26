@@ -1,0 +1,51 @@
+<apex:page controller="Calculator_apex1">
+    <apex:form id="pb">
+        <!-- <apex:sectionHeader title="Loan Calculator"/> -->
+           <h1 style="font-size:25px;padding-left:270px;padding-bottom:80px;font-family:Arial;font-style:italic;color:teal;text-decoration:underline">
+               Loan Calculator</h1>
+           <apex:pageBlock >
+                <apex:pageBlockSection columns="1">
+                     <p style="padding-left:270px;color:red">
+                         {!warning}
+                     </p>              
+        
+              <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Annual Interest" for="annInt"/>
+                <apex:inputText value="{!annInt_val}" id="annInt"/>
+               </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Years" for="year"/>
+                <apex:inputText value="{!year_val}" id="year"/>
+               </apex:pageBlockSectionItem>
+                    
+                    
+                 <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Amount" for="amount"/>
+                <apex:inputText value="{!amount_val}" id="amount"/>
+               </apex:pageBlockSectionItem>
+                    
+              </apex:pageBlockSection>
+               <apex:pageBlockButtons location="bottom">
+                   <apex:commandButton value="Compute Payment" action="{!compute}" style="margin-right:100px" rerender="pb"/>              
+                </apex:pageBlockButtons>   
+               
+           </apex:pageBlock>
+      
+           <apex:pageBlock >
+               <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+             <!-- <apex:outputLabel value="Monthly Payment : " for="monPay"/>  -->           
+            <apex:inputText value="{!monthly_pay_res}" style="margin-left:270px;"/>
+               </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                <!--   <apex:outputLabel value="Total Payment : " for="totPay"/>-->    
+                <apex:inputText value="{!total_pay_res}" style="margin-left:270px;"/>
+               </apex:pageBlockSectionItem>
+             </apex:pageBlockSection>       
+        
+           </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

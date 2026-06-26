@@ -1,0 +1,17 @@
+<apex:page controller="Array_Ex2">
+    <apex:form >
+       <apex:pageBlock >
+             <apex:pageBlockTable value="{!accArray}" var="a" >
+                 <apex:column value="{!a.name}"/>
+                 <apex:column value="{!a.rating}"/>
+                 <apex:column value="{!a.Industry}"/>
+             </apex:pageBlockTable>   
+           
+             <apex:pageBlockTable value="{!policyArr}" var="p">
+                  <apex:column value="{!p.Name}"/>
+                  <apex:column value="{!p.Policy_Amount__c}"/>
+                  <apex:column value="{!p.Policy_Tenure__c}"/>
+             </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

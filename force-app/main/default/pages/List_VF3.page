@@ -1,0 +1,13 @@
+<apex:page controller="List_Ex3">
+    <apex:form >
+         <apex:pageBlock >
+              <apex:pageBlockButtons location="top">
+                   <apex:commandButton value="Show Accounts Data" action="{!showAccounts}"/>
+              </apex:pageBlockButtons>
+               <apex:pageBlockTable value="{!accList}" var="a">
+                        <apex:column value="{!a.name}"/>
+                        <apex:column value="{!a.industry}"/>
+               </apex:pageBlockTable>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,186 @@
+.slds-modal__container {
+    width: 80%;
+    max-width: 75rem;
+}
+
+.slds-modal__header {
+    background: #f3f3f3;
+    border-bottom: 1px solid #d8dde6;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.slds-modal__content {
+    min-height: 350px;
+}
+
+.sectionHeader {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.radioContainer {
+    padding-left: 15px;
+}
+
+.formContainer {
+    width: 450px;
+}
+
+.footerButtons {
+    text-align: right;
+}
+
+.closeButton {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.slds-modal__footer {
+    background: white;
+    border-top: 1px solid #d8dde6;
+}
+
+
+
+
+
+.lookupBox{
+    border:1px solid #d8dde6;
+    background:white;
+    max-height:200px;
+    overflow:auto;
+}
+
+.lookupItem{
+    padding:8px;
+    cursor:pointer;
+}
+
+.lookupItem:hover{
+    background:#f3f3f3;
+}
+
+.header-import{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+
+
+
+
+.userDetails{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    width:100%;
+}
+
+
+.tableContainer{
+    max-height:200px;
+    overflow-y:auto;
+}
+
+
+
+
+
+.sectionTitle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:6px;
+}
+
+.mainHeading{
+    font-size:18px;
+    font-weight:700;
+    color:#181818;
+}
+
+.subHeading{
+    font-size:13px;
+    color:#706e6b;
+    margin-bottom:8px;
+}
+
+.lookupContainer{
+    width:550px;
+}
+
+.lookupBox{
+    border:1px solid #0176d3;
+    border-top:none;
+    background:white;
+}
+
+.lookupItem{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+    cursor:pointer;
+    border-bottom:1px solid #dddbda;
+}
+
+.lookupItem:hover{
+    background:#f3f3f3;
+}
+
+.lookupName{
+    font-size:15px;
+}
+
+.slds-modal__content{
+    min-height:420px;
+}
+
+.userCard{
+    display:flex;
+    align-items:center;
+    padding:15px;
+    border:1px solid #d8dde6;
+    border-radius:6px;
+    background:#fafaf9;
+}
+
+.userAvatar{
+    margin-right:15px;
+}
+
+.userTitle{
+    font-size:16px;
+    font-weight:700;
+}
+
+.userEmail{
+    color:#706e6b;
+}
+
+.initiativeCount{
+    margin-top:5px;
+    font-weight:600;
+}
+
+.sectionTitle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.mainHeading{
+    font-size:18px;
+    font-weight:700;
+}
+
+.subHeading{
+    color:#706e6b;
+    margin-bottom:8px;
+}

@@ -1,0 +1,16 @@
+<template>
+    <template if:true={isAdmin}>
+        <lightning-input label="Account Name"></lightning-input>
+        <lightning-input label="Industry"></lightning-input>
+        <lightning-input label="Annual Revenue"></lightning-input>
+        <lightning-input label="Phone"></lightning-input>
+    </template>
+
+    <template if:false={isAdmin}>
+        <lightning-input label="Account Name"></lightning-input>
+        <lightning-input label="Industry"></lightning-input>
+    </template>
+
+    <lightning-button label="Save" onclick={handleSave}></lightning-button>
+
+</template>

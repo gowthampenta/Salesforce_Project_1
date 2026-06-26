@@ -1,0 +1,21 @@
+<apex:page controller="AccountController">
+    <apex:form >
+        <apex:pageBlock title="Account Form">
+
+            <apex:pageBlockSection >
+                <apex:inputCheckbox value="{!showPhone}">
+                    <apex:actionSupport event="onchange" reRender="phoneBlock"/>
+                </apex:inputCheckbox>
+                <apex:outputLabel value="Show Phone Field"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="phoneBlock">
+                <apex:outputLabel value="Phone"/>
+                <apex:inputText value="{!acc.Phone}" rendered="{!showPhone}"/>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+
+<!--- AccountController  >>>>  purpose  >>>>     show/hide phone field -->
